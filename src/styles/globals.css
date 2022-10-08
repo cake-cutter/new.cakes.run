@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @apply relative;
+
+    background: linear-gradient(to right, #351D4D , #3C1126);
+}
+
+body::before {
+    
+}
