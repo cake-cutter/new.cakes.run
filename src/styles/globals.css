@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,14 +7,26 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Nunito, sans-serif;
 }
 
 body {
-    @apply relative;
-
-    background: linear-gradient(to right, #351D4D , #3C1126);
+    @apply bg-black text-white overflow-hidden;
 }
 
-body::before {
-    
+.rect-1 {
+    @apply relative opacity-100 isolate;
+}
+
+.rect-1::after {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #DB2777 0%, #A855F7 100%);
+    opacity: 0.5;
+    filter: blur(100px);
 }
